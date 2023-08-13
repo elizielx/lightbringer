@@ -1,7 +1,7 @@
 {
-  "name": "lightbringer",
+  "name": "api-gateaway",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/lightbringer/src",
+  "sourceRoot": "apps/api-gateaway/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -11,12 +11,12 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/lightbringer",
-        "main": "apps/lightbringer/src/main.ts",
-        "tsConfig": "apps/lightbringer/tsconfig.app.json",
-        "assets": ["apps/lightbringer/src/assets"],
+        "outputPath": "dist/apps/api-gateaway",
+        "main": "apps/api-gateaway/src/main.ts",
+        "tsConfig": "apps/api-gateaway/tsconfig.app.json",
+        "assets": ["apps/api-gateaway/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/lightbringer/webpack.config.js"
+        "webpackConfig": "apps/api-gateaway/webpack.config.js"
       },
       "configurations": {
         "development": {},
@@ -27,15 +27,15 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "lightbringer:build",
+        "buildTarget": "api-gateaway:build",
         "inspect": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "lightbringer:build:development"
+          "buildTarget": "api-gateaway:build:development"
         },
         "production": {
-          "buildTarget": "lightbringer:build:production"
+          "buildTarget": "api-gateaway:build:production"
         }
       }
     },
@@ -43,14 +43,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/lightbringer/**/*.ts"]
+        "lintFilePatterns": ["apps/api-gateaway/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/lightbringer/jest.config.ts",
+        "jestConfig": "apps/api-gateaway/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
