@@ -4,14 +4,7 @@ package user;
 
 message Id { string id = 1; }
 
-message Query {
-  repeated string select = 1;
-  string where = 2;
-  repeated string orderBy = 3;
-  int32 limit = 4;
-  string before = 5;
-  string after = 6;
-}
+message Query {}
 
 message PageInfo {
   string startCursor = 1;
